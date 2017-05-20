@@ -1,127 +1,55 @@
 
-
-<head>
-<meta charset=utf-8 />
-<title>DB Team PROJECT </title>
-</head>
-<body>
-  <h3 class="text-primary text-center"> DB 팀 프로젝트 <a href = https://dbteam--kyung2.c9users.io/admin >바로가기 </a></h3>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+  <h3 class="text-primary text-center"> <a href = https://dbteam--kyung2.c9users.io/admin > 관리자 페이지 </a></h3>
   
-  <!--
-  <div class"row">
+  <!--SERVICE PART -->  
+    <div class="row  text-center ">
+    <div class ="col-xs-12 col-md-12">  <h1> Service 용량 </h1> </div>
+      <td><%= pie_chart ({"Using core " => @service_using_core , "NotUsing core" => @service_notusing_core, "가용량" => @service_core_available}) , donut: true  %> </td></tr></div>
+</div>
+ <p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p><p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+    <!-- DISK PART-->
+    
+    <div class="row  text-center ">
+    <div class ="col-xs-12 col-md-12">  <h1> DISK 용량 </h1> </div>
+  <div class="col-xs-12 col-sm-12 col-s-6 col-md-3"><tr><td><%= pie_chart ({"가용량" => @storage_left , "사용량" => @storage_using}) , donut: true  %> </td></tr>
+  
+  <tr>
+    <td>DISK 총 용량</td></tr>
+</div>
 
-    <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>ALICE    <label class="label label-success">cpu</label> </p>
-      <div id="ALICE" ></div>
+  <div class="col-xs-12 col-sm-12 col-s-6 col-md-3"><tr><td><%= pie_chart ({"SAN Using" => @storage_using_san_sum , "SAN NOT Using" => @storage_notusing_san_sum, "SAN 가용량" => @storage_san_available}) , donut: true  %></td></tr>
+  
+  <tr>
+    <td>SAN 총 용량</td></tr></div>
+  <div class="col-xs-12 col-sm-12 col-s-6 col-md-3"><tr><td><%= pie_chart ({"NAS Using" => @storage_using_nas_sum , "NAS NOT Using" => @storage_notusing_nas_sum, "NAS 가용량" => @storage_nas_available}) , donut: true  %></td></tr>
+  
+  <tr>
+    <td>NAS 총 용량</td></tr></div>
+  <div class="col-xs-12 col-sm-12 col-s-6 col-md-3"><tr><td><%= pie_chart ({"TAPE Using" => @storage_using_tape_sum , "TAPE NOT Using" => @storage_notusing_tape_sum, "TAPE 가용량" => @storage_tape_available}) , donut: true  %></td></tr>
+  
+  <tr>
+    <td>TAPE 총 용량</td></tr>
+    </div>
     </div>
     
-    <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>KIAF    <label class="label label-success">cpu</label> </p>
-      <div id="KIAF" ></div>
+    <div class = "text-center">
+    <p> <font size="4" >CAUCSE 2017 SPRING DB SYSTEM & PROGRMMING PROJECT</font></p>
+    <p> <font size="2" >Thank for ASTRO!!!!!!</font></p>
+    <p> </p>
     </div>
-    <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>CMS(T3)    <label class="label label-success">cpu</label> </p>
-      <div id="CMST3" ></div>
-    </div>
-    
-    <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>CMS(T2)<label class="label label-success">cpu</label> </p>
-      <div id="CMST2" ></div>
-    </div>
-    
-    <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>CMS(HCP)    <label class="label label-success">cpu</label> </p>
-      <div id="CMSHCP" ></div>
-    </div>
-    <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>BELLE <label class="label label-success">cpu</label> </p>
-      <div id="BELLE" ></div>
-    </div>
-    
-        <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>LIGO <label class="label label-success">cpu</label> </p>
-      <div id="LIGO" ></div>
-    </div>
-    
-        <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>RENO <label class="label label-success">cpu</label> </p>
-      <div id="RENO" ></div>
-    </div>
-    
-            <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>BIO <label class="label label-success">cpu</label> </p>
-      <div id="BIO" ></div>
-    </div>
-    
-    
-            <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>EPIG <label class="label label-success">cpu</label> </p>
-      <div id="EPIG" ></div>
-    </div>
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>TEM <label class="label label-success">cpu</label> </p>
-      <div id="TEM" ></div>
-    </div>
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>PUBSER<label class="label label-success">cpu</label> </p>
-      <div id="PUBSER" ></div>
-    </div>
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>ADMIN <label class="label label-success">cpu</label> </p>
-      <div id="ADMIN_" ></div>
-    </div>
-    
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>VHM <label class="label label-success">cpu</label> </p>
-      <div id="VHM" ></div>
-    </div>
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>GCLOUD <label class="label label-success">cpu</label> </p>
-      <div id="GCLOUD" ></div>
-    </div>
-    
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>BRAIN <label class="label label-success">cpu</label> </p>
-      <div id="BRAIN" ></div>
-    </div>
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>VISUAL <label class="label label-success">cpu</label> </p>
-      <div id="VISUAL" ></div>
-    </div>
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>OPEN SCIENCE <label class="label label-success">cpu</label> </p>
-      <div id="OPENSCIENCE" ></div>
-    </div>
-    
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>FREE<label class="label label-success">cpu</label> </p>
-      <div id="FREE" ></div>
-    </div>
-    
-    
-    
-    
-    
-    
-                <div class="col-sm-3 col-sm-offset-3 text-center">
-      <p>EPIG <label class="label label-success">cpu</label> </p>
-      <div id="EPIG" ></div>
-    </div>
-    
-    
-    
-    
-    
-    
-  </div>
-  -->
-</body>
